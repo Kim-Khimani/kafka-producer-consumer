@@ -9,10 +9,10 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer #to handle Json message formats
 
       properties:
-       spring.json.trusted.packages: '*' #allows all packages to be accepted
+       spring.json.trusted.packages: '*' # * allows all packages to be accepted
 
     producer:
       bootstrap-servers: localhost:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       #value-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.Jsonserializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
